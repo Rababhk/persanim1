@@ -1,0 +1,151 @@
+/*
+Theme Name: coolte
+
+Adding support for languages written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right-to-Left_Language_Support
+
+*/
+
+/*
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+*/
+.rtl .twp-primary-title,
+.rtl .page-header .page-title, 
+.rtl .widget .widget-title {
+	padding-right: initial;
+	padding-left: 15px;
+}
+.rtl .twp-primary-title:after, 
+.rtl .page-header .page-title:after, 
+.rtl .widget .widget-title:after {
+	right: initial;
+	left: -60px;
+}
+  
+.rtl .twp-float-left {
+	float: right;
+}
+.rtl .twp-float-right {
+	float: left;
+}
+.rtl .twp-menu-icon span:before {
+	left: initial;
+	right: 0;
+}
+.rtl .twp-menu-icon span:after {
+	left: initial;
+	right: 10px;
+}
+.rtl .twp-breadcrumbs ul li {
+	float: right;
+	padding: 0 0 0 60px;
+}
+.rtl .twp-breadcrumbs ul li:after {
+	transform: translateY(-50%) rotate(180deg);
+	-webkit-transform: translateY(-50%) rotate(180deg);
+	-moz-transform: translateY(-50%) rotate(180deg);
+	right: initial;
+	left: 23px;
+}
+.rtl .mc4wp-form-fields input[type=checkbox] {
+	margin-right: initial;
+	margin-left: 10px;
+}
+.rtl .widget .search-form label {
+	float: right;
+}
+.rtl .post-navigation .nav-previous {
+	float: right;
+}
+.rtl .post-navigation .nav-next {
+	text-align: left;
+}
+.rtl.single .post-navigation .nav-next a {
+	padding: 15px 30px 15px 45px;
+}
+.rtl.single .post-navigation .nav-next a:after {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	right: initial;
+	left: 15px;
+}
+.rtl.single .post-navigation .nav-previous a {
+	padding: 15px 45px 15px 30px;
+}
+.rtl.single .post-navigation .nav-previous a:before {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	right: 15px;
+	left: initial;
+}
+.rtl .twp-banner-slider-section .twp-banner-wrapper .twp-banner-slider {
+	float: right;
+}
+.rtl .twp-banner-slider-section .twp-banner-wrapper .twp-banner-pagination-section:before {
+	left: initial;
+	right: -60px;
+}
+.rtl .twp-banner-slider-section .twp-banner-wrapper .twp-banner-pagination h4 {
+	padding-left: 30px;
+	padding-right: 60px;
+}
+.rtl .twp-banner-slider-section .twp-banner-wrapper .twp-banner-pagination h4 span {
+	left: initial;
+	right: 30px;
+}
+.rtl .twp-banner-slider-section .twp-banner-wrapper .twp-banner-pagination .slick-current figure:after {
+	right: initial;
+	left: 0;
+}
+.rtl ul.twp-social-icons li {
+	float: right;
+}
+.rtl .twp-single-page-author-section .single-content-experpt {
+	border-left: 0;
+	border-right-style: solid;
+	border-right-width: 3px;
+}
+.rtl .twp-comments-section .comment-list li .comment-meta .comment-metadata .edit-link,
+.rtl .twp-comments-section .comment-list li .comment-meta .comment-metadata time {
+	padding-left: 20px;
+	padding-right: 25px;
+}
+.rtl .twp-comments-section .comment-list li .comment-meta .comment-metadata .edit-link:before,
+.rtl .twp-comments-section .comment-list li .comment-meta .comment-metadata time:before {
+	left: initial;
+	right: 0;
+}
+.rtl .twp-comments-section .comment-list li .comment-content p {
+	padding-left: initial;
+	padding-right: 20px;
+}
+.rtl .twp-comments-section .comment-list li .comment-content p:before {
+	left: initial;
+	right: 0;
+}
+.rtl .twp-nav-main-navigation .twp-tooltip {
+	right: initial;
+	left: 0;
+}
+.rtl .twp-nav-main-navigation .twp-tooltip:after {
+	right: initial;
+	left: 10px;
+}
+/* Slick Arrow */
+.rtl .slick-prev{
+	padding-right: 8px;
+	padding-left: 0;
+
+}
+.rtl .slick-next{
+	padding-left: 0;
+	padding-right: 15px;
+}
